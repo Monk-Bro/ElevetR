@@ -9,7 +9,7 @@
 
 .navbar {
   width: 100%;
-  background-color: #ffffff;
+  background-image: linear-gradient(90deg, #A5B4FC 0%, #22D3EE 100%);
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: fixed;
@@ -31,7 +31,7 @@
 .logo {
   font-size: 30px;
   font-weight: 900;
-  color: #111827;
+  color: black;
   cursor: pointer;
   letter-spacing: 2px;
 }
@@ -52,7 +52,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #1f2937;
+  color: #FFFFFF;
   font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
@@ -74,7 +74,7 @@
 }
 
 .nav-links a:hover {
-  color: #4f46e5;
+  color: #FACC15;
 }
 
 .nav-links a:hover::after {
@@ -103,7 +103,7 @@
   font-weight: 900;
   font-size: 17px;
   border: none;
-  color: black;
+  color: #4F46E5;
   background-color: white;
   box-shadow: 1px 2px 15px black;
 }
@@ -115,7 +115,7 @@
   border-radius: 20px;
   font-weight: 900;
   font-size: 17px;
-  color: white;
+  color: #4F46E5;
   border: none;
   background-color: black;
 
@@ -161,8 +161,14 @@
 }
 
 .hero h1 span {
- background: linear-gradient(135deg, #FACC15, #F472B6);
-  font-weight: 900;}
+  background: linear-gradient(135deg, #FACC15 0%, #F472B6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-size: 50px;
+}
 
 .hero p {
   font-size: 1.2rem;
@@ -180,12 +186,15 @@
   border-radius: 9999px;
   text-decoration: none;
   transition: all 0.3s ease;
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
 
 }
 
 .cta-btn:hover {
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 /* ---------section 1------------- */
@@ -212,12 +221,12 @@
 }
 
 .card {
-  background: #f9fafb;
   border-radius: 16px;
   padding: 40px 30px;
   flex: 1 1 300px;
   max-width: 340px;
   transition: all 0.3s ease;
+  background-image: linear-gradient(120deg, rgb(184, 135, 230), rgb(236, 128, 128));
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -229,7 +238,7 @@
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
-  background: linear-gradient(145deg, #ffffff, #f3f4ff);
+  background-image: linear-gradient(180deg, blueviolet, black);
 }
 
 .icon {
@@ -239,14 +248,14 @@
 }
 
 .card h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #111827;
   margin-bottom: 10px;
 }
 
 .card p {
-  color: #4b5563;
-  font-size: 0.95rem;
+  color: white;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -256,10 +265,9 @@
 
 /* ---------------------section 2-------------------------- */
 .postings {
-  background: #ffffff;
+  background: #F8FAFC;
   padding: 80px 0;
   width: 100%;
-  background-color: whitesmoke;
 }
 
 .post-head {
@@ -306,15 +314,15 @@
   height: 344px;
   flex-shrink: 0;
   padding: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.15);
   transition: all 0.3s ease;
 
 }
 
 .list-cards:hover {
-  transform: translateY(-6px);
+  transform: translateY(7px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  background: linear-gradient(145deg, #ffffff, #eef2ff);
+  background: linear-gradient(135deg, #A5B4FC, #22D3EE);
 }
 
 .card-logo img {
@@ -325,15 +333,26 @@
 }
 
 .card-name h4 {
-  color: #111827;
+  color: #1E293B;
   font-size: 20px;
   margin-top: 2em;
+  transition: color 0.3s ease;
+}
+
+.list-cards:hover .card-name h4 {
+  color: #ffffff;
+}
+
+.list-cards:hover .card-summary p {
+  color: #E0F2FE;
 }
 
 .card-summary p {
-  color: #4b5563;
+  color: black;
   font-size: 16px;
+  color: #475569;
   line-height: 1.5;
+  transition: color 0.3s ease;
   margin-top: 3em;
 }
 
@@ -349,20 +368,27 @@
 .view-all-btn {
   display: inline-block;
   color: black;
+  background: linear-gradient(135deg, #A5B4FC 0%, #22D3EE 100%);
+  color: #ffffff;
   padding: 12px 30px;
   border-radius: 9999px;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgb(182, 134, 227);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+  transition: all 0.3s ease;
 }
 
 .view-all-btn:hover {
-  background-color: #4338ca;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+background: linear-gradient(135deg, #6366F1 0%, #0EA5E9 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.view-all-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.2);
 }
 
 .card-logo {
@@ -370,7 +396,14 @@
   height: 64px;
 
 }
+.view-all-btn {
+  animation: gentlePulse 3s infinite ease-in-out;
+}
 
+@keyframes gentlePulse {
+  0%, 100% { box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25); }
+  50% { box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4); }
+}
 /*------- --------------section 3--------- ------------*/
 .reviews {
   width: 100%;
@@ -383,14 +416,13 @@
   width: 512px;
   height: 527px;
   padding: 5em;
-  background-color: #000000;
+  background: linear-gradient(135deg, #A5B4FC 0%, #22D3EE 100%);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 2;
-
 }
 
 .comma-image {
@@ -434,7 +466,7 @@
 .review-box {
   width: 1260px;
   height: 527px;
-  background: linear-gradient(135deg, #F3F4F6, #FFFFFF);
+  background: #F8FAFC;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -459,10 +491,10 @@
   width: 500px;
   height: 283px;
   flex: 0 0 auto;
-  background-color: #ffffff;
+  background-color:#FFFFFF;
   border-radius: 16px;
   padding: 18px 27px 27px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.1);
   transition: all 0.3s ease;
   border: 1px solid #f3f4f6;
   align-content: center;
@@ -501,19 +533,19 @@
 
 .user-details h4 {
   font-size: 1rem;
-  color: #111827;
+  color: #1E293B;
   font-weight: 600;
   margin-bottom: 0;
 }
 
 .user-details p {
   font-size: 0.9rem;
-  color: blueviolet;
+  color: #64748B;
 }
 
 .review-text {
   font-size: 0.95rem;
-  color: #23395e;
+  color: #475569;
   line-height: 1.6;
   margin-top: 3em;
   line-height: 2;
@@ -813,7 +845,7 @@
   .nav-links {
     flex-direction: column;
     width: 100%;
-    display: none; 
+    display: none;
     margin: 10px 0;
   }
 
@@ -859,50 +891,52 @@
     font-size: 0.9rem;
   }
 
-  .login, .signup {
+  .login,
+  .signup {
     font-size: 0.9rem;
     padding: 8px 15px;
   }
 }
 
 /* hero-section */
- @media (max-width: 768px) {
-    .hero {
-      padding: 70px 15px;
-    }
-
-    .hero-content h1 {
-      font-size: 2.2rem;
-    }
-
-    .hero-content p {
-      font-size: 1rem;
-    }
-
-    .cta-btn {
-      padding: 12px 25px;
-      font-size: 0.95rem;
-    }
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 15px;
   }
 
-  @media (max-width: 480px) {
-    .hero {
-      padding: 50px 10px;
-    }
-
-    .hero-content h1 {
-      font-size: 1.8rem;
-    }
-
-    .hero-content p {
-      font-size: 0.95rem;
-    }
-
-    .cta-btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
 /* section 1 */
 @media (max-width: 1024px) {
   .features {
@@ -979,6 +1013,7 @@
     font-size: 2rem;
   }
 }
+
 @media (max-width: 420px) {
   .features h2 {
     font-size: 1.5rem;
@@ -1000,6 +1035,7 @@
     font-size: 1.8rem;
   }
 }
+
 /* section 2 */
 @media (max-width: 1024px) {
   .postings {
@@ -1114,6 +1150,7 @@
     font-size: 0.9rem;
   }
 }
+
 /* Section 3 */
 @media (max-width: 992px) {
   .reviews {
@@ -1193,6 +1230,7 @@
     font-size: 0.75rem;
   }
 }
+
 /* section 4 */
 @media (max-width: 992px) {
   .Employers {
@@ -1268,6 +1306,7 @@
     font-size: 0.9rem;
   }
 }
+
 /* footer */
 @media (max-width: 1024px) {
   .footer-container {
@@ -1320,6 +1359,7 @@
     justify-content: center;
   }
 }
+
 @media (max-width: 640px) {
   .footer {
     padding: 50px 5%;
