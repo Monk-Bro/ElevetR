@@ -1,0 +1,130 @@
+/* Contact Us Section */
+.contact-us {
+  background: linear-gradient(135deg, #c1f0f6, #a3e4f7);
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-us h2 {
+  font-size: 2.8rem;
+  color: #05445e;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  font-size: 1.1rem;
+  color: #07575b;
+  margin-bottom: 50px;
+  line-height: 2;
+}
+
+/* Contact Information */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+.info-item {
+  background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  width: 250px;
+  text-align: center;
+  align-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-item i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover i {
+  transform: rotate(20deg);
+}
+
+.info-item p, .info-item a {
+  font-size: 20px;
+  color: #05445e;
+}
+
+/* Form Styling */
+#contact-form {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#contact-form h3 {
+  font-size: 2rem;
+  color: #05445e;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #07575b;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #05445e;
+  background-color: rgba(255,255,255,0.8);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  outline: none;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0097a7, #00bcd4);
+  transform: scale(1.05);
+}
