@@ -153,6 +153,20 @@
   <div class="ai-assistant">
     <button class="ai-btn">🧠 Ask ElevatR</button>
   </div>
+  <!-- Chat Box -->
+  <div class="chat-box hidden">
+    <div class="chat-header">
+      <h3>Ask ElevatR</h3>
+      <button id="closeChat">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <p class="bot-msg">👋 Hi! I'm ElevatR. Ask me anything about careers, skills, or internships.</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your question..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
 
   <!-- Reviews section  -->
   <section class="reviews">
@@ -268,7 +282,7 @@
             <img src="image.source/elon-musk.jpg" alt="user">
             <div class="user-details">
               <h4>Elon Musk</h4>
-              <p>Full stack Developer</p>
+              <p>CEO Tesla</p>
             </div>
           </div>
         </div>
@@ -324,6 +338,59 @@
 
     </div>
   </footer>
+
+  <script>
+    const aiBtn = document.querySelector(".ai-btn");
+const chatBox = document.querySelector(".chat-box");
+const sendBtn = document.getElementById("sendBtn");
+const userInput = document.getElementById("userInput");
+const chatBody = document.getElementById("chatBody");
+const closeChat = document.getElementById("closeChat");
+
+// Open/close chat
+aiBtn.addEventListener("click", () => chatBox.classList.toggle("hidden"));
+closeChat.addEventListener("click", () => chatBox.classList.add("hidden"));
+
+// Mock bot answers
+const responses = {
+  "resume": "🪄 To create a great resume, highlight your top skills, add measurable achievements, and keep it one page.",
+  "internship": "💼 Check out the Internships tab for the latest openings matching your field and skill level!",
+  "career": "🚀 Based on your interests, you can explore roles like Data Analyst, Web Developer, or AI Engineer.",
+  "skills": "🎯 Strengthen your profile with certifications in Python, SQL, or AI-based projects.",
+  "default": "🤖 That’s interesting! I’ll soon learn more to help you better. Try asking about internships or career paths!"
+};
+
+// Send message
+sendBtn.addEventListener("click", () => {
+  const query = userInput.value.trim();
+  if (!query) return;
+
+  chatBody.innerHTML += `<p class="user-msg">${query}</p>`;
+  userInput.value = "";
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  // Simulate typing
+  const typing = document.createElement("p");
+  typing.classList.add("bot-msg");
+  typing.textContent = "ElevatR is typing...";
+  chatBody.appendChild(typing);
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  setTimeout(() => {
+    typing.remove();
+    let answer = responses["default"];
+    for (let key in responses) {
+      if (query.toLowerCase().includes(key)) {
+        answer = responses[key];
+        break;
+      }
+    }
+    chatBody.innerHTML += `<p class="bot-msg">${answer}</p>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 1200);
+});
+
+  </script>
 </body>
 
 </html>
